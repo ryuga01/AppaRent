@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".apartment1">
+
+    <ImageView
+        android:id="@+id/apartment1"
+        android:layout_width="412dp"
+        android:layout_height="291dp"
+        android:transitionName="background_image_transition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/apartment1"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        app:layout_constraintEnd_toEndOf="@+id/apartment1"
+        app:layout_constraintTop_toTopOf="@+id/apartment1"
+        android:src="@drawable/ic_down_arrow" />
+
+
+    <ScrollView
+        android:id="@+id/third_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apartment1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/third_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:text="The STRAT Hotel, Casino &amp; SkyPod"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/third_ratingbar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccent"
+                android:rating="4.5"
+                android:stepSize="0.5"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/third_rating_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="4.75"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/third_rating_number2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="(510)"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="About"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/about_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="
+Rental Rate and Term (Php): 2 months advance rent and 2 months deposit
+For Foreigner: 1 year advance rent and 2 months security deposit
+Minimum Lease Term: 1 year
+No. of Occupants: up to 3."
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/venue_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Details"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/venue_type_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Subdivision name:
+Timog Hills Subdivision.
+Bedrooms:
+3.
+Fully furnished:
+Yes.
+Floor area (m²):
+36"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/type_of_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="About Timog Residences"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/type_of_view_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="Timog Residences by The Hauslands Pampanga is one of the residential communities in Angeles City that is designed for budding families looking for homes in a laid-back neighborhood close to Angeles' metropolitan center."
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Location:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/dito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/open_sans_regular"
+            android:text=" EVERLASTING, 2009 ANGELES CITY, PHILIPPINES PAMPANG, ANGELES"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

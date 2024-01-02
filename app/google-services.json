@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614827030270",
+    "project_id": "apparent-c9384",
+    "storage_bucket": "apparent-c9384.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614827030270:android:b1f2c94a90b021524e17af",
+        "android_client_info": {
+          "package_name": "com.example.apparent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGTTqknQF_biMwMagYExhGCPzFjiM8ia8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

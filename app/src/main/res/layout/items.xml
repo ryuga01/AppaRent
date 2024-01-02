@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="226dp"
+    android:layout_margin="16dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/apartmentBackgroundImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/apartment1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
+
+            <TextView
+                android:id="@+id/apartmentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="116dp"
+                android:fontFamily="@font/open_sans_extra_bold"
+                android:text=" Apartment , Angedddddddddddles City, Pampanga"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <RatingBar
+                android:id="@+id/apartmentRating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="16dp"
+                android:max="5"
+                android:numStars="5"
+                android:progressTint="@color/colorAccent"
+                android:rating="4.5"
+                android:stepSize="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apartmentName"/>
+
+            <TextView
+                android:id="@+id/apartmentRatingCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="4.91"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/apartmentRating"
+                app:layout_constraintTop_toBottomOf="@id/apartmentName"/>
+
+            <TextView
+                android:id="@+id/apartmentNumberOfRatings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="(510)"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/apartmentRatingCountText"
+                app:layout_constraintTop_toTopOf="@+id/apartmentRatingCountText"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
