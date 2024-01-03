@@ -39,10 +39,10 @@
         android:layout_margin="10dp"
         android:hint="Address"
         android:inputType="textPostalAddress" />
-
-    <!--Button for adding data to Firebase-->
-    <Button
-        android:id="@+id/idBtnSendData"
+<!-- image -->
+    <!-- image -->
+    <ImageView
+        android:id="@+id/idBtnImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idEditAddress"
@@ -50,7 +50,31 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:clickable="true"
+        android:onClick="goToApparment"
+        android:text="Image "
+        android:textAllCaps="false" />
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnPickImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnImage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Choose image"
+        android:textAllCaps="false" />
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnSendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBtnPickImage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:text="Add Rental house"
         android:textAllCaps="false" />
 

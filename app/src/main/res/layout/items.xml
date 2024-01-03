@@ -17,6 +17,7 @@
                 android:id="@+id/apartmentBackgroundImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/car_ui_color_accent"
                 android:background="@drawable/apartment1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

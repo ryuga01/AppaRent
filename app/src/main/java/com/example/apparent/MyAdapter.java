@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,6 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.ratingText.setText(Double.toString(user.getRatings()));
         holder.ratingBar.setRating((float) user.getRatings());
         holder.image.setBackground(Drawable.createFromPath(user.getPhoto()));
+//        holder.image.setBackgroundColor(0xFF00FF00);
 
 
 
@@ -68,10 +70,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             image = itemView.findViewById(R.id.apartmentBackgroundImage);
             ratingText = itemView.findViewById(R.id.apartmentNumberOfRatings);
             ratingBar  = itemView.findViewById(R.id.apartmentRating);
-
-
-
-
         }
     }
 
