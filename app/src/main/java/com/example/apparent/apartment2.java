@@ -30,7 +30,7 @@ public class apartment2 extends AppCompatActivity {
         setContentView(R.layout.activity_apartment2);
 
         down_arrow = findViewById(R.id.down_arrow);
-        fourth_scrollview = findViewById(R.id.fourth_scrollview);
+        fourth_scrollview = findViewById(R.id.infoScrollView);
 
         from_bottom = AnimationUtils.loadAnimation(this, R.anim.anim_from_bottom);
 

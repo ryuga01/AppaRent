@@ -50,7 +50,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/third_title"
+            android:id="@+id/infoTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_extra_bold"
@@ -65,7 +65,7 @@
             android:orientation="horizontal">
 
             <RatingBar
-                android:id="@+id/third_ratingbar"
+                android:id="@+id/infoRatingBar"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/about_text"
+            android:id="@+id/infoDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -186,7 +186,7 @@ Floor area (m²):
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/dito"
+            android:id="@+id/infoLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

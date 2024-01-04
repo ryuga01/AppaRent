@@ -7,7 +7,7 @@
     tools:context=".apartment2">
 
     <ImageView
-        android:id="@+id/apartment2"
+        android:id="@+id/infoImageCover"
         android:layout_width="412dp"
         android:layout_height="291dp"
         android:transitionName="background_image_transition"
@@ -24,13 +24,13 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="34dp"
         android:layout_marginRight="34dp"
-        app:layout_constraintEnd_toEndOf="@+id/apartment2"
-        app:layout_constraintTop_toTopOf="@+id/apartment2"
+        app:layout_constraintEnd_toEndOf="@+id/infoImageCover"
+        app:layout_constraintTop_toTopOf="@+id/infoImageCover"
         android:src="@drawable/ic_down_arrow" />
 
 
     <ScrollView
-        android:id="@+id/fourth_scrollview"
+        android:id="@+id/infoScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
@@ -42,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apartment2">
+        app:layout_constraintTop_toBottomOf="@+id/infoImageCover">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/third_title"
+                android:id="@+id/infoTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_extra_bold"
@@ -65,7 +65,7 @@
                 android:orientation="horizontal">
 
                 <RatingBar
-                    android:id="@+id/third_ratingbar"
+                    android:id="@+id/infoRatingBar"
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/about_text"
+                android:id="@+id/infoDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -187,7 +187,7 @@ floor-to-ceiling windows."
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/dito"
+                android:id="@+id/infoLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

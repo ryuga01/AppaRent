@@ -119,16 +119,15 @@ public class AddApartmentView extends AppCompatActivity {
                 String address = landLordAddressEdt.getText().toString();
                 // below line is for checking whether the
                 // edittext fields are empty or not.
-                if (name.isEmpty() || phone.isEmpty() || address.isEmpty()) {
+                if (name.isEmpty() || phone.isEmpty() || address.isEmpty() || filePath==null ) {
 
                     // if the text fields are empty
                     // then show the below message.
-                    Toast.makeText(AddApartmentView.this, "Please add some data.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddApartmentView.this, "Kindly check fields.", Toast.LENGTH_SHORT).show();
                 } else {
                     // else call the method to add
                     // data to our database.
-                    uploadImage();
-                    addDatatoFirebase(name, phone, address);
+                    uploadImage(name, phone,address );
                 }
             }
         });
@@ -162,13 +161,15 @@ public class AddApartmentView extends AppCompatActivity {
 
 
 
-    public void addDatatoFirebase(String name, String phone, String address) {
+    public void addDatatoFirebase(String name, String phone, String address, String downloadURL) {
         // below 3 lines of code is used to set
         // data in our object class.
         apartmentUnit.setName(name);
         apartmentUnit.setDescription(phone);
         apartmentUnit.setAddress(address);
-        System.out.println("DATA ADDED");
+        apartmentUnit.setImagePath(downloadURL);
+        System.out.println("DATA ADDED" + apartmentUnit.toString());
+
         // this will create a table specifically only for landLord
         DatabaseReference landLord = databaseReference.child("ApartmentUnit");
         DatabaseReference newPostRef = landLord.push();
@@ -182,8 +183,9 @@ public class AddApartmentView extends AppCompatActivity {
     }
 
 
+    String downloadURL;
+    private void uploadImage(String name, String phone, String address) {
 
-    private void uploadImage() {
         if(filePath != null)
         {
             final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -195,7 +197,18 @@ public class AddApartmentView extends AppCompatActivity {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
-                            System.out.println("Files goes here: "+ );
+                            taskSnapshot.getStorage().getDownloadUrl().addOnSuccessListener(
+                                    new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            System.out.println("The Path goes here "+uri.toString());
+                                            downloadURL = uri.toString();
+                                            addDatatoFirebase(name, phone, address, downloadURL);
+
+                                        }
+                                    }
+                            );
+                            System.out.println("Files goes here: " + ref.getDownloadUrl());
                             Toast.makeText(AddApartmentView.this, "Uploaded", Toast.LENGTH_SHORT).show();
                         }
                     })

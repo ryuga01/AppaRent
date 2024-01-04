@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".apartment6">
+    tools:context=".MainPageInformationDisplay">
 
     <ImageView
-        android:id="@+id/apartment6"
+        android:id="@+id/infoImageCover"
         android:layout_width="412dp"
         android:layout_height="291dp"
         android:transitionName="background_image_transition"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/apartment6"
         tools:targetApi="lollipop" />
 
     <ImageView
@@ -24,13 +23,13 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="34dp"
         android:layout_marginRight="34dp"
-        app:layout_constraintEnd_toEndOf="@+id/apartment6"
-        app:layout_constraintTop_toTopOf="@+id/apartment6"
+        app:layout_constraintEnd_toEndOf="@+id/infoImageCover"
+        app:layout_constraintTop_toTopOf="@+id/infoImageCover"
         android:src="@drawable/ic_down_arrow" />
 
 
     <ScrollView
-        android:id="@+id/eighth_scrollview"
+        android:id="@+id/infoScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
@@ -42,7 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apartment6">
+        app:layout_constraintTop_toBottomOf="@+id/infoImageCover">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -130,26 +129,8 @@ the time needed for one full rotation."
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/venue_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="Venue Type"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/venue_type_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:alpha="0.5"
-                android:fontFamily="@font/open_sans_regular"
-                android:text="Restaurant"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp" />
+
 
             <TextView
                 android:id="@+id/type_of_view"
@@ -157,35 +138,9 @@ the time needed for one full rotation."
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/open_sans_bold"
-                android:text="Type of View"
+                android:text="Location"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/type_of_view_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:alpha="0.5"
-                android:fontFamily="@font/open_sans_regular"
-                android:text="It might surprise you, but this is the only
-revolving restaurant in Las Vegas. Located
-844 feet in the air, you’re bound to get
-a great view of the city with its massive
-floor-to-ceiling windows."
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/Location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="Location:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="15sp" />
-
             <TextView
                 android:id="@+id/infoLocation"
                 android:layout_width="match_parent"
@@ -199,6 +154,4 @@ floor-to-ceiling windows."
         </LinearLayout>
 
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

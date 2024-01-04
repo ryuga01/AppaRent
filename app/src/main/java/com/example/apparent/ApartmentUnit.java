@@ -68,4 +68,17 @@ public class ApartmentUnit {
     public void setContactDetails(String contactDetails) {
         this.contactDetails = contactDetails;
     }
+
+    @Override
+    public String toString() {
+        return "ApartmentUnit{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", ratings=" + ratings +
+                ", imagePath='" + imagePath + '\'' +
+                ", description='" + description + '\'' +
+                ", contactDetails='" + contactDetails + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
 }

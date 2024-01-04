@@ -30,12 +30,12 @@ public class FourthActivity extends AppCompatActivity {
 
         third_back_arrow = findViewById(R.id.third_back_arrow);
         third_arrow_up = findViewById(R.id.third_arrow_up);
-        third_title = findViewById(R.id.third_title);
+        third_title = findViewById(R.id.infoTitle);
         third_subtitle = findViewById(R.id.third_subtitle);
         third_rating_number = findViewById(R.id.third_rating_number);
         third_rating_number2 = findViewById(R.id.third_rating_number2);
         more_details = findViewById(R.id.more_details);
-        third_ratingbar = findViewById(R.id.third_ratingbar);
+        third_ratingbar = findViewById(R.id.infoRatingBar);
 
         third_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
